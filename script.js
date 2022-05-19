@@ -70,48 +70,46 @@ function elOut() {
       duration: 0.5,
       delay: 1.2,
     });
+
+    var changetext = gsap.timeline({repeat: -1});
+    changetext.to("#section1-1 .changetext1", {
+      text: {
+        value: "Perkenalkan Cindy,",
+      },
+      yoyo: true,
+      repeat:1,
+      repeatDelay:4,
+      duration: 2,
+    },0).to("#section1-1 .changetext1_2", {
+      text: {
+        value: "Cindy di sini sedang melamar menjadi seorang Marketing",
+      },
+      yoyo: true,
+      repeat:1,
+      repeatDelay:4,
+      duration: 2,
+    },0).to("#section1-1 .changetext2", {
+      text: {
+        value: "Keahlian Cindy,",
+      },
+      yoyo: true,
+      repeat:1,
+      repeatDelay:4,
+      duration: 2,
+      delay: 7,
+    },1).to("#section1-1 .changetext2_2", {
+      text: {
+        value: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      },
+      yoyo: true,
+      repeat:1,
+      repeatDelay:4,
+      duration: 2,
+      delay: 7,
+    },1);
+
+    changetext.resume();
     gsap.from("#section1-1 .kart,#section1-1 .kart5", { opacity: 0, delay: 1.2, duration: 0.5 });
-    gsap.to("#section1-1 .changetext1", {
-        text: {
-          value: "Perkenalkan Cindy,",
-        },
-        yoyo: true,
-        repeat:1,
-        repeatDelay:1,
-        duration: 2,
-        delay: 1,
-      });
-      gsap.to("#section1-1 .changetext1_2", {
-        text: {
-          value: "Cindy di sini sedang melamar menjadi seorang Marketing",
-        },
-        yoyo: true,
-        repeat:1,
-        repeatDelay:1,
-        duration: 2,
-        delay: 1,
-      });
-   
-    gsap.to("#section1-1 .changetext2", {
-        text: {
-          value: "Keahlian Cindy,",
-        },
-        yoyo: true,
-        repeat:-1,
-        repeatDelay:1,
-        duration: 2,
-        delay: 6,
-      });
-    gsap.to("#section1-1 .changetext2_2", {
-        text: {
-          value: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        },
-        yoyo: true,
-        repeat:-1,
-        repeatDelay:1,
-        duration: 2,
-        delay: 6,
-      });
   });
   
   gsap.to("#section1-1 .kart5", {
