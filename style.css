@@ -62,37 +62,97 @@
     background-color: var(--warna4);
     margin-left: 18rem;
   }
-  
-  #section1-1 .kart {
+  #mainWrap{
     position: absolute;
     z-index: 5;
-    object-fit: contain;
   }
-  
-  #section1-1 .kart1 {
-    width: 244px;
-    margin-bottom: 242px;
-    margin-right: 126px;
+  .cardCont
+  {
+    position: absolute;
+    margin-right:10px;
   }
-  
-  #section1-1 .kart2 {
-    width: 223px;
-    margin-top: 278px;
-    margin-right: 136px;
+  .kart1{
+    width:220px;
+    height:180px;
+    margin-top: -200px;
+    margin-left: -150px;
   }
-  
-  #section1-1 .kart3 {
-    width: 207px;
-    margin-bottom: 170px;
-    margin-left: 724px;
+  .kart2{
+    width:220px;
+    height:200px;
+    margin-top: -180px;
+    margin-left: 250px;
   }
-  
-  #section1-1 .kart4 {
-    width: 207px;
-    margin-top: 302px;
-    margin-left: 720px;
+  .kart3{
+    width:220px;
+    height:200px;
+    margin-top: 40px;
+    margin-left: -150px;
   }
-  
+  .kart4{
+    width:220px;
+    height:200px;
+    margin-top: 40px;
+    margin-left: 250px;
+  }
+  .kart1 .cardFront{
+    background:url('Assets/Section1-1-Certification.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  .kart1 .cardBack{
+    background:url('Assets/Section1-1-Certification-details.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  .kart2 .cardFront{
+    background:url('Assets/Section1-1-Education.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  .kart2 .cardBack{
+    background:url('Assets/Section1-1-Education-details.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  .kart3 .cardFront{
+    background:url('Assets/Section1-1-Experience.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  .kart3 .cardBack{
+    background:url('Assets/Section1-1-Experience-details.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  .kart4 .cardFront{
+    background:url('Assets/Section1-1-Skill.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  .kart4 .cardBack{
+    background:url('Assets/Section1-1-Skill-details.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  .cardFront, .cardBack
+  {
+    position:absolute;
+    width:220px;
+    height:200px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+  }
   #section1-1 .kart5 {
     position: absolute;
     z-index: 5;
@@ -111,7 +171,7 @@
   #section1-1 .kart5 p:nth-child(1),
   #section1-1 .kart5 p:nth-child(2) {
     color: #2B2B29;
-    font-size: 24px;
+    font-size: 23px;
     font-weight: 900;
     line-height: 35px;
   }

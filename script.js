@@ -3,6 +3,36 @@ function scrollWin() {
     window.scrollBy(0, window.innerHeight);
   }
   gsap.registerPlugin(ScrollTrigger);
+  CSSPlugin.defaultTransformPerspective = 1000;
+
+//we set the backface 
+TweenMax.set($(".cardBack"), {rotationY:-180});
+
+$.each($(".cardCont"), function(i,element) {
+  
+  var frontCard = $(this).children(".cardFront"),
+      backCard = $(this).children(".cardBack"),
+      tl = new TimelineMax({paused:true});
+  
+  tl
+    .to(frontCard, 1, {rotationY:180})
+    .to(backCard, 1, {rotationY:0},0)
+    .to(element, .5, {z:50},0)
+    .to(element, .5, {z:0},.5);
+  
+  element.animation = tl;
+  
+});
+
+$(".cardCont").hover(elOver, elOut);
+
+function elOver() {
+    this.animation.play();
+}
+
+function elOut() {
+    this.animation.reverse();
+}
   $(document).ready(function () {
     gsap.to("#section1-1 .mask1", {
       scaleY: 0,
@@ -43,7 +73,7 @@ function scrollWin() {
     gsap.from("#section1-1 .kart,#section1-1 .kart5", { opacity: 0, delay: 1.2, duration: 0.5 });
     gsap.to("#section1-1 .changetext1", {
         text: {
-          value: "Perkenalkan Cindy",
+          value: "Perkenalkan Cindy,",
         },
         yoyo: true,
         repeat:1,
@@ -93,9 +123,9 @@ function scrollWin() {
       scrub: true
     }, 
   });
-  
-  gsap.to("#section1-1 .kart1 ,#section1-1 .kart2 ,#section1-1 .kart3 ,#section1-1 .kart4", {
-    yPercent: -400,
+
+  gsap.to("#section1-1 .cardCont", {
+    yPercent: -410,
     ease: "none",
     scrollTrigger: {
       trigger: "#section1-1",
