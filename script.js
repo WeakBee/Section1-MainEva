@@ -40,11 +40,52 @@ function scrollWin() {
       duration: 0.5,
       delay: 1.2,
     });
-    gsap.from("#section1-1 .kart", { opacity: 0, delay: 1.2, duration: 0.5 });
+    gsap.from("#section1-1 .kart,#section1-1 .kart5", { opacity: 0, delay: 1.2, duration: 0.5 });
+    gsap.to("#section1-1 .changetext1", {
+        text: {
+          value: "Perkenalkan Cindy",
+        },
+        yoyo: true,
+        repeat:1,
+        repeatDelay:1,
+        duration: 2,
+        delay: 1,
+      });
+      gsap.to("#section1-1 .changetext1_2", {
+        text: {
+          value: "Cindy di sini sedang melamar menjadi seorang Marketing",
+        },
+        yoyo: true,
+        repeat:1,
+        repeatDelay:1,
+        duration: 2,
+        delay: 1,
+      });
+   
+    gsap.to("#section1-1 .changetext2", {
+        text: {
+          value: "Keahlian Cindy,",
+        },
+        yoyo: true,
+        repeat:-1,
+        repeatDelay:1,
+        duration: 2,
+        delay: 6,
+      });
+    gsap.to("#section1-1 .changetext2_2", {
+        text: {
+          value: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        },
+        yoyo: true,
+        repeat:-1,
+        repeatDelay:1,
+        duration: 2,
+        delay: 6,
+      });
   });
   
   gsap.to("#section1-1 .kart5", {
-    yPercent: -600,
+    yPercent: -700,
     ease: "none",
     scrollTrigger: {
       trigger: "#section1-1",
