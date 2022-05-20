@@ -24,18 +24,60 @@ gsap.set(".cardBack", {rotationY:-180});
       repeat:1,
       repeatDelay:4,
       duration: 2,
-    },0).to(".cardFront", 1, {
+    },0).to(".kart1 .cardFront", 1, {
       yoyo: true,
       rotationY:0,
       repeat:1,
       repeatDelay:4,
       duration: 2,
-    },0).to(".cardBack", 1, {
+    },0).to(".kart1 .cardBack", 1, {
       yoyo: true,
       rotationY:180,
       repeat:1,
       repeatDelay:4,
       duration: 2,
+    },0).to(".kart2 .cardFront", 1, {
+      yoyo: true,
+      rotationY:0,
+      repeat:1,
+      repeatDelay:4,
+      duration: 2,
+      delay:0.1,
+    },0).to(".kart2 .cardBack", 1, {
+      yoyo: true,
+      rotationY:180,
+      repeat:1,
+      repeatDelay:4,
+      duration: 2,
+      delay:0.1,
+    },0).to(".kart3 .cardFront", 1, {
+      yoyo: true,
+      rotationY:0,
+      repeat:1,
+      repeatDelay:4,
+      duration: 2,
+      delay:0.2,
+    },0).to(".kart3 .cardBack", 1, {
+      yoyo: true,
+      rotationY:180,
+      repeat:1,
+      repeatDelay:4,
+      duration: 2,
+      delay:0.2,
+    },0).to(".kart4 .cardFront", 1, {
+      yoyo: true,
+      rotationY:0,
+      repeat:1,
+      repeatDelay:4,
+      duration: 2,
+      delay:0.3,
+    },0).to(".kart4 .cardBack", 1, {
+      yoyo: true,
+      rotationY:180,
+      repeat:1,
+      repeatDelay:4,
+      duration: 2,
+      delay:0.3,
     },0).to("#section1-1 .changetext2", {
       text: {
         value: "Keahlian Cindy,",
@@ -54,20 +96,62 @@ gsap.set(".cardBack", {rotationY:-180});
       repeatDelay:8,
       duration: 2,
       delay: 7,
-    },1).to(".cardFront", 1, {
+    },1).to(".kart1 .cardFront", 1, {
       yoyo: true,
       rotationY:180,
       repeat:1,
       repeatDelay:10.5,
       duration: 2,
       delay: 7,
-    },1).to(".cardBack", 1, {
+    },1).to(".kart1 .cardBack", 1, {
       yoyo: true,
       rotationY:0,
       repeat:1,
       repeatDelay:10.5,
       duration: 2,
       delay: 7,
+    },1).to(".kart2 .cardFront", 1, {
+      yoyo: true,
+      rotationY:180,
+      repeat:1,
+      repeatDelay:10.5,
+      duration: 2,
+      delay: 7.1,
+    },1).to(".kart2 .cardBack", 1, {
+      yoyo: true,
+      rotationY:0,
+      repeat:1,
+      repeatDelay:10.5,
+      duration: 2,
+      delay: 7.1,
+    },1).to(".kart3 .cardFront", 1, {
+      yoyo: true,
+      rotationY:180,
+      repeat:1,
+      repeatDelay:10.5,
+      duration: 2,
+      delay: 7.2,
+    },1).to(".kart3 .cardBack", 1, {
+      yoyo: true,
+      rotationY:0,
+      repeat:1,
+      repeatDelay:10.5,
+      duration: 2,
+      delay: 7.2,
+    },1).to(".kart4 .cardFront", 1, {
+      yoyo: true,
+      rotationY:180,
+      repeat:1,
+      repeatDelay:10.5,
+      duration: 2,
+      delay: 7.3,
+    },1).to(".kart4 .cardBack", 1, {
+      yoyo: true,
+      rotationY:0,
+      repeat:1,
+      repeatDelay:10.5,
+      duration: 2,
+      delay: 7.3,
     },1);
 
     changetext.resume();
