@@ -4,14 +4,14 @@ function scrollWin() {
   }
   gsap.registerPlugin(ScrollTrigger);
 
-//we set the backface 
-TweenMax.set($(".cardBack"), {rotationY:-180});
+//we set the backface
+gsap.set(".cardBack", {rotationY:-180});
 
 $.each($(".cardCont"), function(i,element) {
   
   var frontCard = $(this).children(".cardFront"),
       backCard = $(this).children(".cardBack"),
-      cardflipping = new TimelineMax({repeat:-1,repeatDelay:7,yoyo: true,delay:7});
+      cardflipping = gsap.timeline({repeat:-1,repeatDelay:7,yoyo: true,delay:7});
 
   cardflipping
     .to(frontCard, 1, {rotationY:180})
