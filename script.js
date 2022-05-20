@@ -7,11 +7,56 @@ function scrollWin() {
 //we set the backface
 gsap.set(".cardBack", {rotationY:-180});
 
-$.each($(".cardCont"), function(i,element) {
+$.each($(".kart1"), function(i,element) {
   
   var frontCard = $(this).children(".cardFront"),
       backCard = $(this).children(".cardBack"),
       cardflipping = gsap.timeline({repeat:-1,repeatDelay:7,yoyo: true,delay:7});
+
+  cardflipping
+    .to(frontCard, 1, {rotationY:180})
+    .to(backCard, 1, {rotationY:0},0)
+    .to(element, .5, {z:50},0)
+    .to(element, .5, {z:0},.5);
+  
+  cardflipping.resume();
+  
+});
+$.each($(".kart2"), function(i,element) {
+  
+  var frontCard = $(this).children(".cardFront"),
+      backCard = $(this).children(".cardBack"),
+      cardflipping = gsap.timeline({repeat:-1,repeatDelay:7.1,yoyo: true,delay:7.1});
+
+  cardflipping
+    .to(frontCard, 1, {rotationY:180})
+    .to(backCard, 1, {rotationY:0},0)
+    .to(element, .5, {z:50},0)
+    .to(element, .5, {z:0},.5);
+  
+  cardflipping.resume();
+  
+});
+$.each($(".kart3"), function(i,element) {
+  
+  var frontCard = $(this).children(".cardFront"),
+      backCard = $(this).children(".cardBack"),
+      cardflipping = gsap.timeline({repeat:-1,repeatDelay:7.2,yoyo: true,delay:7.2});
+
+  cardflipping
+    .to(frontCard, 1, {rotationY:180})
+    .to(backCard, 1, {rotationY:0},0)
+    .to(element, .5, {z:50},0)
+    .to(element, .5, {z:0},.5);
+  
+  cardflipping.resume();
+  
+});
+$.each($(".kart4"), function(i,element) {
+  
+  var frontCard = $(this).children(".cardFront"),
+      backCard = $(this).children(".cardBack"),
+      cardflipping = gsap.timeline({repeat:-1,repeatDelay:7.3,yoyo: true,delay:7.3});
 
   cardflipping
     .to(frontCard, 1, {rotationY:180})
