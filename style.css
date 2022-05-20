@@ -65,6 +65,7 @@
   #mainWrap{
     position: absolute;
     z-index: 5;
+    perspective: 1000px;
   }
   .cardCont
   {

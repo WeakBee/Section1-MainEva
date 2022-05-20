@@ -3,7 +3,6 @@ function scrollWin() {
     window.scrollBy(0, window.innerHeight);
   }
   gsap.registerPlugin(ScrollTrigger);
-  CSSPlugin.defaultTransformPerspective = 1000;
 
 //we set the backface 
 TweenMax.set($(".cardBack"), {rotationY:-180});
@@ -12,27 +11,18 @@ $.each($(".cardCont"), function(i,element) {
   
   var frontCard = $(this).children(".cardFront"),
       backCard = $(this).children(".cardBack"),
-      tl = new TimelineMax({paused:true});
-  
-  tl
+      cardflipping = new TimelineMax({repeat:-1,repeatDelay:7,yoyo: true,delay:7});
+
+  cardflipping
     .to(frontCard, 1, {rotationY:180})
     .to(backCard, 1, {rotationY:0},0)
     .to(element, .5, {z:50},0)
     .to(element, .5, {z:0},.5);
   
-  element.animation = tl;
+  cardflipping.resume();
   
 });
 
-$(".cardCont").hover(elOver, elOut);
-
-function elOver() {
-    this.animation.play();
-}
-
-function elOut() {
-    this.animation.reverse();
-}
   $(document).ready(function () {
     gsap.to("#section1-1 .mask1", {
       scaleY: 0,
